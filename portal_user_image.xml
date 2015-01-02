@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<openerp>
+    <data>
+
+    <record id="view_res_company_image_portal_fields" model="ir.ui.view">
+      <field name="name">view.res.users.add.fields</field>
+      <field name="model">res.company</field>
+      <field name="inherit_id" ref="base.view_company_form"/>
+      <field name="arch" type="xml">
+        <data>
+          <xpath expr="//page[@string='Report Configuration']" position="after">
+                <page string="Portal User">
+                    <group>
+                        <field name="portal_image" widget='image' class="oe_avatar oe_left" nolabel="1"/>
+                    </group>
+                </page>
+          </xpath>
+        </data>
+      </field>
+    </record>
+
+
+
+
+    </data>
+</openerp>

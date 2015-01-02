@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- vim:fdn=3:
+-->
+<openerp>
+    <data>
+        <template id="assets_backend" name="portal_user_image assets" inherit_id="web.assets_backend">
+            <xpath expr="." position="inside">
+                <script type="text/javascript" src="/portal_user_image/static/src/js/portal_image.js"></script>
+            </xpath>
+        </template>
+        <template id="portal_image" name="portal_user_image" inherit_id="web.menu_secondary">
+            <xpath expr="//a[@class='oe_logo']" position="replace">
+                <a class="oe_logo" t-att-href="'/web/?debug' if debug else '/web'">
+                    <span class="oe_logo_edit">Edit Company data</span>
+                    <img src='/portal_user_image/binary/company_logo' style="max-width:220px;"/>
+                </a>
+            </xpath>
+        </template>
+    </data>
+</openerp>
